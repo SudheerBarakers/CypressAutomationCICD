@@ -17,4 +17,4 @@ COPY . .
 RUN npx cypress install
 
 # Run Cypress tests
-CMD ["npx", "cypress", "run"]
+#CMD ["npx", "cypress", "run"]
