@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1719053123507' stop='1719053137954'>
+    <name>My First Test suite</name>
+    <title>My First Test suite</title>
+    <test-cases>
+        <test-case start='1719053123507' status='failed' stop='1719053137923'>
+            <name>My First Test Case</name>
+            <title>My First Test Case</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timed out retrying after 4000ms: expected '' to include 'rahulshettyacademy'</message>
+                <stack-trace>AssertionError: Timed out retrying after 4000ms: expected '' to include 'rahulshettyacademy'
+                    at Context.eval (webpack://cyautomation/./cypress/integration/examples/Test4.js:32:17)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
