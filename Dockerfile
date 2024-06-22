@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Install Cypress dependencies
-RUN npx cypress install
+#RUN npx cypress install
 
 # Run Cypress tests
 #CMD ["npx", "cypress", "run"]
