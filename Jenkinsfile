@@ -19,9 +19,9 @@ pipeline {
          stage('Run Cypress') {
            
             steps{
-               // catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                 bat "./node_modules/.bin/cypress run"
-               // }
+               }
                }
             }
        
