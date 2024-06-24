@@ -27,7 +27,7 @@ pipeline {
        
        stage('Build docker image'){
             steps{
-               bat "docker build -t cypress-app ."
+               bat "docker build -t cypress-demo ."
             }
         }
      
@@ -35,9 +35,9 @@ pipeline {
      stage('Push to docker Hub') {
          steps{    
        withCredentials([usernamePassword(credentialsId:'dockerhub', passwordVariable:'dockerhubPass', usernameVariable: 'dockerhubuser')]) {
-            bat "docker tag cypress-app ${env.dockerhubuser}/cypress-app:latest"
+            bat "docker tag cypress-demo ${env.dockerhubuser}/cypress-demo:latest"
             bat "docker login -u ${env.dockerhubuser} -p ${env.dockerhubPass}"
-            bat "docker push ${env.dockerhubuser}/cypress-app:latest"
+            bat "docker push ${env.dockerhubuser}/cypress-demo:latest"
         }
       }
     }
